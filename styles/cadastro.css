@@ -1,0 +1,257 @@
+main,
+.img-bkg>div,
+.login,
+.card-container,
+.card-content-area,
+.card-footer {
+    display: flex;
+}
+
+.img-bkg>div,
+.card-content-area,
+.card-footer,
+.login {
+    flex-direction: column;
+}
+
+.info,
+.img-bkg {
+    width: 100vw;
+    height: 100vh;
+    min-height: 40rem;
+}
+
+.img-bkg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+        url(../assets/bibli-grande.jpg);
+    background-repeat: round;
+}
+
+.img-bkg>div {
+    justify-content: end;
+    height: 55%;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    padding: 0 2.5rem;
+}
+
+.info {
+    background-color: var(--background);
+    padding: .3125rem;
+}
+
+.div-info {
+    margin: 2.5rem 2.5rem 0;
+}
+
+.div-info>a {
+    font-size: 1.25rem;
+}
+
+.login {
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+.card-container{
+    gap: 1.25rem;
+    justify-content: space-around;
+
+}
+
+.card {
+    background-color: #ead186;
+    padding: 2rem;
+    border-radius: .3125rem;
+    width: 80%;
+    min-width: 17.5rem;
+}
+
+.card-header {
+    padding-bottom: .625rem;
+    opacity: 0.8;
+}
+
+.card-header::after {
+    content: "";
+    width: 8rem;
+    height: .0625rem;
+    background-color: var(--font);
+    display: block;
+    margin-top: -0.1875rem;
+    margin-left: -0.25rem;
+}
+
+.card-content label {
+    font-size: .8125rem;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.card-content label::before{
+    content: "*";
+    font-weight: lighter;
+    color: red;
+}
+
+.card-content-area {
+    padding: .625rem 0;
+}
+
+.card-content-area input, select, option {
+    margin-top: .625rem;
+    padding: 0 .3125rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: .0625rem solid var(--font);
+    outline: none;
+    width: 100%;
+    min-width: 7.375rem;
+}
+
+li{
+    font-size: .5rem;
+    list-style: none;
+    padding-left: .125rem;
+}
+#sexo{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    min-width: auto;
+    font-weight: lighter;
+}
+
+select{
+    background-color: #ead186;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:hover{
+    -webkit-text-fill-color: var(--font) !important;
+    -webkit-box-shadow: 0 0 0 30px #ead186 inset;
+}
+
+.card-content-area input:focus:valid {
+    border-color: green;
+}
+
+.card-content-area input:focus:invalid {
+    border-color: red;
+}
+
+button {
+    width: 100%;
+    height: 2.5rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: .3125rem;
+    color: #fff;
+    margin: .625rem 0;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #1d4c7c;
+    transform: scale(1.01);
+}
+
+.card-footer a {
+    text-align: center;
+    font-size: .75rem;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 47.9375rem) {
+    main {
+        flex-direction: column;
+    }
+
+    .img-bkg {
+        display: none;
+    }
+
+    .info{
+        min-height: 45rem;
+    }
+}
+
+@keyframes book-bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-0.625rem);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shelf-lift {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    20% {
+        transform: translateY(-0.25rem) rotate(10deg);
+    }
+
+    40% {
+        transform: translateY(-0.25rem) rotate(0);
+    }
+
+    40% {
+        transform: translateY(-0.25rem) rotate(-10deg);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.book-shelf:hover {
+    cursor: pointer;
+
+    .book-shelf__book {
+        animation: book-bounce 0.4s ease;
+        animation-iteration-count: 1;
+    }
+
+    .book-shelf__book--two {
+        animation-delay: 0.04s;
+    }
+
+    .book-shelf__book--three {
+        animation-delay: 0.08s;
+    }
+
+    .book-shelf__shelf {
+        animation: shelf-lift 0.4s ease;
+        animation-iteration-count: 1;
+        transform-origin: 50% 50%;
+    }
+}

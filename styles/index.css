@@ -1,0 +1,167 @@
+
+main, .card, .info-div,.img-bkg > div{
+    display: flex;
+}
+
+.info,.img-bkg{
+    width: 100vw;
+    height: 100vh;
+}
+
+.img-bkg{
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url(../assets/bibli-grande.jpg);
+    background-repeat: round; 
+}
+
+.img-bkg > div{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+    padding: 0 2.5rem;
+}
+
+.info{
+    background-color: var(--background);
+    padding: .625rem;
+}
+
+.card{
+    align-items: center;
+    justify-content: space-between;
+    height: 33%;
+    
+}
+.card img{
+    width: 10.625rem;
+    border-radius: 50%;
+    padding: .625rem;
+}
+
+.info-div{
+    flex-direction: column;
+    align-items: center;
+    gap: .9375rem;
+
+}
+
+.info-div p, .info-div h2{
+    width: 80%;
+    text-align: center;
+}
+
+.info-div button{
+    margin-right: .625rem;
+    padding: .3125rem .625rem;
+    border-radius: .3125rem;
+    background-color: var(--primary);
+    border: none;
+    color: #fff;
+}
+
+.info-div button:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+    background-color: #295e94;
+}
+
+.invertido{
+    flex-direction: row-reverse;
+}
+
+.cabecalho {
+    background: #fff;
+    width: 90%;
+    height: 3em;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+
+.chamada {
+    padding: 1em;
+}
+
+
+
+@media screen and (min-width: 48rem) and (max-width:63.9375rem) {
+    .card img{
+        width: 9.6875rem;
+    }
+
+    .info-div{
+        gap: .625rem;
+    }
+    
+    main{
+        font-size: 12.8px;
+    }
+
+}
+@media screen and (max-width: 48rem){
+   
+    main{
+        flex-direction: column;
+    }
+
+    .card{
+        flex-direction: column;  
+        padding: .9375rem;
+    }
+
+    .info{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2.5rem;
+        padding-top: 3.125rem;
+    }
+
+}
+
+
+@keyframes book-bounce {
+    0% { transform: translateY(0); }
+    40% { transform: translateY(-0.625rem); }
+    80% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes shelf-lift {
+    0% { transform: translateY(0) rotate(0); }
+    20% { transform: translateY(-0.25rem) rotate(10deg); }
+    40% { transform: translateY(-0.25rem) rotate(0); }
+    40% { transform: translateY(-0.25rem) rotate(-10deg); }
+    80% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+  }
+  
+  .book-shelf:hover {
+    cursor: pointer;
+    
+    .book-shelf__book {
+      animation: book-bounce 0.4s ease;
+      animation-iteration-count: 1;
+    }
+    
+    .book-shelf__book--two {
+      animation-delay: 0.04s;
+    }
+  
+    .book-shelf__book--three {
+      animation-delay: 0.08s;
+    }
+    
+    .book-shelf__shelf {
+      animation: shelf-lift 0.4s ease;
+      animation-iteration-count: 1;
+      transform-origin: 50% 50%;
+    }
+  }

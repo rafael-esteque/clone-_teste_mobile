@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Área logada da plataforma eLendo">
+    <meta name="keywords" content="biblioteca, livros">
+
+    <link rel="icon" href="../assets/book-open-svgrepo-com.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/arealogada.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Área Logada</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="navBar">
+    <header>
+        <nav class="navbar  bg-light custom-nav" data-bs-theme="light">
+            <div class="navbar-logo">
+                <a class="navbar-logo-titulo" href="#">eLendo</a>
+                <div id="animacao" class="animacao">
+
+                    <svg class="book-shelf" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 84 94" height="94" width="84">
+                        <path fill="none" d="M37.612 92.805L4.487 73.71c-2.75-1.587-4.45-4.52-4.45-7.687L.008 27.877c-.003-3.154 1.676-6.063 4.405-7.634L37.558 1.167c2.73-1.57 6.096-1.566 8.835.013l33.124 19.096c2.75 1.586 4.45 4.518 4.45 7.686l.028 38.146c.002 3.154-1.677 6.063-4.406 7.634L46.445 92.818c-2.73 1.57-6.096 1.566-8.834-.013z"/>
+                        <g class="book-shelf__book book-shelf__book--one" fill-rule="evenodd">
+                          <path fill="#5199fc" d="M31 29h4c1.105 0 2 .895 2 2v29c0 1.105-.895 2-2 2h-4c-1.105 0-2-.895-2-2V31c0-1.105.895-2 2-2z"/>
+                          <path fill="#afd7fb" d="M34 36h-2c-.552 0-1-.448-1-1s.448-1 1-1h2c.552 0 1 .448 1 1s-.448 1-1 1zm-2 1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2c-.552 0-1-.448-1-1s.448-1 1-1z"/>
+                        </g>
+                        <g class="book-shelf__book book-shelf__book--two" fill-rule="evenodd">
+                          <path fill="#ff9868" d="M39 34h6c1.105 0 2 .895 2 2v24c0 1.105-.895 2-2 2h-6c-1.105 0-2-.895-2-2V36c0-1.105.895-2 2-2z"/>
+                          <path fill="#d06061" d="M42 38c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z"/>
+                        </g>
+                        <g class="book-shelf__book book-shelf__book--three" fill-rule="evenodd">
+                          <path fill="#ff5068" d="M49 32h2c1.105 0 2 .86 2 1.92v25.906c0 1.06-.895 1.92-2 1.92h-2c-1.105 0-2-.86-2-1.92V33.92c0-1.06.895-1.92 2-1.92z"/>
+                          <path fill="#d93368" d="M50 35c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1s-1-.448-1-1v-2c0-.552.448-1 1-1z"/>
+                        </g>
+                        <g fill-rule="evenodd">
+                          <path class="book-shelf__shelf" fill="#ae8280" d="M21 60h40c1.105 0 2 .895 2 2s-.895 2-2 2H21c-1.105 0-2-.895-2-2s.895-2 2-2z"/>
+                          <path fill="#855f6d" d="M51.5 67c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5zm-21 0c-.828 0-1.5-.672-1.5-1.5V64h3v1.5c0 .828-.672 1.5-1.5 1.5z"/>
+                        </g>
+                      </svg>
+
+                </div>
+            </div>
+
+            <div class="links-wrapper">
+                <a href="#busca-de-livros" class="">Busca</a>
+                <a href="#indicacoes-carousel" class="">Indicações</a>
+                <a href="#alugados" class="">Aluguéis</a>
+                <a href="#planos" class="">Planos</a>
+                <a href="./login.html" class="">Sair</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-mobile"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Começo do ASIDE-->
+
+            <aside class="offcanvas offcanvas-end" tabindex="-1" id="menu-mobile" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Opções</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a href="#busca-de-livros" class="btn btn-light">Busca   <i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#indicacoes-carousel" class="btn btn-light">Indicações   <i class="fa-regular fa-lightbulb"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#alugados" class="btn btn-light">Aluguéis   <i class="fa-regular fa-calendar"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#planos-section" class="btn btn-light">Planos   <i class="fa-solid fa-book"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./login.html" class="btn btn-light">Sair   <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+
+              <!--FINAL DO ASIDE-->
+        </nav>
+    </header>
+
+    <main>
+        <div class="containers-paralelos">
+
+            <section id="busca-de-livros" class="busca-container">
+                    <h2>O que você quer ler hoje?</h2>
+                    <div>
+                        <span>Nosso acervo tem quase qualquer leitura que você possa querer.</span><br>
+                        <br>
+                        <span>Busque e descubra <strong>gratuitamente</strong> em que biblioteca o livro está.</span>
+                    </div>
+                    <div class="buscador">
+                        <input placeholder="Digite título, autor ou editora" required>
+                        <br><br>
+                        <button>Buscar!</button>
+                    </div>
+            </section>
+    
+            <section id="indicacoes-carousel" class="carousel-container">
+                <h2>Indicações: os livros mais procurados deste mês:</h2>
+
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#caroulselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+    
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="../assets/memorias-postumas.jpg" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../assets/como-escrever-uma-tese.jpg" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../assets/o-universo.jpg" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="../assets/sapiens.jpg" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../assets/mangueira.jpg" class="d-block w-100" alt="">
+                        </div>
+                      </div>
+    
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+    
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                </div>
+            </section>
+
+        </div>
+        
+        <section id="alugados" class="alugados-container">
+            <h2>Os seus alugados no momento</h2>
+            <div class="alugados">
+
+                <div class="alugado">
+                    <img class="alugado__img" src="../assets/hobbit.jpg">
+                    <div class="botoes__pequenos">
+                        <button class="botao__pequeno">Devolver</button>
+                        <button class="botao__pequeno">Prorrogar aluguel</button>
+                    </div>
+
+                    <div class="alugado__conteudo">
+                        <h4 class="alugado__titulo">O Hobbit</h4>
+                        <p class="alugado__infos">Alugado em: 02/05/2022<br>Devolução até: 23/08/2023</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hobbit">
+                        Ver ficha completa
+                    </button>
+
+                    <div class="modal fade" id="hobbit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">O Hobbit</h5>
+                            </div>
+                            <div class="modal-body">
+                                J.R.R. Tolkien (Autor), Reinaldo José Lopes (Tradutor)<br>
+                                Editora: HarperCollins; 1ª edição (15 julho 2019)<br>
+                                Idioma: Português<br>
+                                Capa dura: 336 páginas<br><br>
+                                <strong>Sinopse:</strong><br>
+                                Bilbo Bolseiro era um dos mais respeitáveis hobbits de todo o Condado até que, um dia, o mago Gandalf bate à sua porta. A partir de então, toda sua vida pacata e campestre soprando anéis de fumaça com seu belo cachimbo começa a mudar. Ele é convocado a participar de uma aventura por ninguém menos do que Thorin Escudo-de-Carvalho, um príncipe do poderoso povo dos Anãos.<br>
+                                Esta jornada fará Bilbo, Gandalf e 13 anãos atravessarem a Terra-média, passando por inúmeros perigos, como os imensos trols, as Montanhas Nevoentas infestadas de gobelins ou a muito antiga e misteriosa Trevamata, até chegarem (se conseguirem) na Montanha Solitária. Lá está um incalculável tesouro, mas há um porém. Deitado em cima dele está Smaug, o Dourado, um dragão malicioso que... bem, você terá que ler para descobrir.<br>
+                                Lançado em 1937, O Hobbit é um divisor de águas na literatura de fantasia mundial. Mais de 80 anos após a sua publicação, o livro que antecede os ocorridos em O Senhor dos Anéis continua arrebatando fãs de todas as idades, talvez pelo seu tom brincalhão com uma pitada de magia élfica, ou talvez porque J.R.R. Tolkien tenha escrito o melhor livro infantojuvenil de todos os tempos.<br>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+
+                <div class="alugado">
+                    <img class="alugado__img" src="../assets/hp1.jpg">
+                    <div class="botoes__pequenos">
+                        <button class="botao__pequeno">Devolver</button>
+                        <button class="botao__pequeno">Prorrogar aluguel</button>
+                    </div>
+
+                    <div class="alugado__conteudo">
+                        <h4 class="alugado__titulo">Harry Potter e a Pedra Filosofal</h4>
+                        <p class="alugado__infos">Alugado em: 17/06/2022<br>Devolução até: 23/08/2023</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hp1">
+                        Ver ficha completa
+                    </button>
+
+                    <div class="modal fade" id="hp1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Harry Potter e a Pedra Filosofal</h5>
+                            </div>
+                            <div class="modal-body">
+                                J. K. Rowling (Autor)<br>
+                                Editora: Rocco; 1ª edição (7 abril 2000)<br>
+                                Idioma: Português<br>
+                                Capa dura: 264 páginas<br><br>
+                                <strong>Sinopse:</strong><br>
+                                Harry Potter é um garoto cujos pais, feiticeiros, foram assassinados por um poderosíssimo bruxo quando ele ainda era um bebê. Ele foi levado, então, para a casa dos tios que nada tinham a ver com o sobrenatural. Pelo contrário. Até os 10 anos, Harry foi uma espécie de gata borralheira: maltratado pelos tios, herdava roupas velhas do primo gorducho, tinha óculos remendados e era tratado como um estorvo. No dia de seu aniversário de 11 anos, entretanto, ele parece deslizar por um buraco sem fundo, como o de Alice no país das maravilhas, que o conduz a um mundo mágico. Descobre sua verdadeira história e seu destino: ser um aprendiz de feiticeiro até o dia em que terá que enfrentar a pior força do mal, o homem que assassinou seus pais. O menino de olhos verde, magricela e desengonçado, tão habituado à rejeição, descobre, também, que é um herói no universo dos magos. Potter fica sabendo que é a única pessoa a ter sobrevivido a um ataque do tal bruxo do mal e essa é a causa da marca em forma de raio que ele carrega na testa. Ele não é um garoto qualquer, ele sequer é um feiticeiro qualquer ele é Harry Potter, símbolo de poder, resistência e um líder natural entre os sobrenaturais. A fábula, recheada de fantasmas, paredes que falam, caldeirões, sapos, unicórnios, dragões e gigantes, não é, entretanto, apenas um passatempo.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+
+                <div class="alugado">
+                    <img class="alugado__img" src="../assets/cleancode.jpg">
+                    <div class="botoes__pequenos">
+                        <button class="botao__pequeno">Devolver</button>
+                        <button class="botao__pequeno">Prorrogar aluguel</button>
+                    </div>
+
+                    <div class="alugado__conteudo">
+                        <h4 class="alugado__titulo">Clean Code</h4>
+                        <p class="alugado__infos">Alugado em: 29/01/2022<br>Devolução até: 23/08/2023</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cleancode">
+                        Ver ficha completa
+                    </button>
+
+                    <div class="modal fade" id="cleancode" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Clean Code</h5>
+                            </div>
+                            <div class="modal-body">
+                                Robert C. Martin (Autor)<br>
+                                Editora: Alta Books; 1ª edição (8 de setembro de 2009)<br>
+                                Idioma: Português<br>
+                                Capa comum: 425 páginas<br><br>
+
+                                <strong>Sinopse:</strong><br>
+                                Mesmo um código ruim pode funcionar. Mas se ele não for limpo, pode acabar com uma empresa de desenvolvimento. Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito. Mas não precisa ser assim.O renomado especialista em software, Robert C. Martin, apresenta um paradigma revolucionário com Código limpo: 
+                                Habilidades Práticas do Agile Software. Martin se reuniu com seus colegas do Mentor Object para destilar suas melhores e mais ágeis práticas de limpar códigos “dinamicamente” em um livro que introduzirá gradualmente dentro de você os valores da habilidade de um profissional de softwares e lhe tornar um programador melhor –mas só se você praticar. Que tipo de trabalho você fará? Você lerá códigos aqui, muitos códigos. E você deverá descobrir o que está correto e errado nos códigos. E, o mais importante, você terá de reavaliar seus valores profissionais e seu comprometimento com o seu ofício.Código limpo está divido em três partes. 
+                                Na primeira há diversos capítulos que descrevem os princípios, padrões e práticas para criar um código limpo.
+                                A segunda parte consiste em diversos casos de estudo de complexidade cada vez maior. 
+                                Cada um é um exercício para limpar um código – transformar o código base que possui alguns problemas em um melhor e eficiente. 
+                                A terceira parte é a compensação: um único capítulo com uma lista de heurísticas e “odores” reunidos durante a criação dos estudos de caso. O resultado será um conhecimento base que descreve a forma como pensamos quando criamos, lemos e limpamos um código.Após ler este livro os leitores saberão:<br>
+                                <br>✔ Como distinguir um código bom de um ruim
+                                <br>✔ Como escrever códigos bons e como transformar um ruim em um bom
+                                <br>✔ Como criar bons nomes, boas funções, bons objetos e boas classes
+                                <br>✔ Como formatar o código para ter uma legibilidade máxima
+                                <br>✔ Como implementar completamente o tratamento de erro sem obscurecer a lógica
+                                <br>✔ Como aplicar testes de unidade e praticar o desenvolvimento dirigido a testes<br>
+                                <br>Este livro é essencial para qualquer desenvolvedor, engenheiro de software, gerente de projeto, líder de equipes ou analistas de sistemas com interesse em construir códigos melhores.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+
+                <div class="alugado">
+                    <img class="alugado__img" src="../assets/bootstrap.jpg">
+                    <div class="botoes__pequenos">
+                        <button class="botao__pequeno">Devolver</button>
+                        <button class="botao__pequeno">Prorrogar aluguel</button>
+                    </div>
+
+                    <div class="alugado__conteudo">
+                        <h4 class="alugado__titulo">Bootstrap Reference Guide</h4>
+                        <p class="alugado__infos">Alugado em: 02/05/2022<br>Devolução até: 23/08/2023</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#brg">
+                        Ver ficha completa
+                    </button>
+
+                    <div class="modal fade" id="brg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Bootstrap Reference Guide</h5>
+                            </div>
+                            <div class="modal-body">
+                                Jacob Lett (Autor)<br>
+                                Editora: <br>
+                                Idioma: <br>
+                                Capa dura: <br>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+
+                <div class="alugado">
+                    <img class="alugado__img" src="../assets/got1.jpg">
+                    <div class="botoes__pequenos">
+                        <button class="botao__pequeno">Devolver</button>
+                        <button class="botao__pequeno">Prorrogar aluguel</button>
+                    </div>
+
+                    <div class="alugado__conteudo">
+                        <h4 class="alugado__titulo">A Guerra dos Tronos</h4>
+                        <p class="alugado__infos">Alugado em: 02/05/2022<br>Devolução até: 23/08/2023</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#got1">
+                        Ver ficha completa
+                    </button>
+
+                    <div class="modal fade" id="got1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">A Guerra dos Tronos : As Crônicas de Gelo e Fogo, volume 1</h5>
+                            </div>
+                            <div class="modal-body">
+                                George R. R. Martin (Autor)<br>
+                                Editora: Suma; 1ª edição (25 março 2019)<br>
+                                Idioma: Português<br>
+                                Capa comum: 600 páginas<br>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+
+                <div class="alugado">
+                    <img class="alugado__img" src="../assets/fogo_e_sangue.jpg">
+                    <div class="botoes__pequenos">
+                        <button class="botao__pequeno">Devolver</button>
+                        <button class="botao__pequeno">Prorrogar aluguel</button>
+                    </div>
+
+                    <div class="alugado__conteudo">
+                        <h4 class="alugado__titulo">Fogo e Sangue</h4>
+                        <p class="alugado__infos">Alugado em: 02/05/2022<br>Devolução até: 23/08/2023</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Ver ficha completa
+                    </button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">O Hobbit</h5>
+                            </div>
+                            <div class="modal-body">
+                                J.R.R. Tolkien (Autor), Reinaldo José Lopes (Tradutor)<br>
+                                Editora: HarperCollins; 1ª edição (15 julho 2019)<br>
+                                Idioma: Português<br>
+                                Capa dura: 336 páginas<br>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+
+                <div class="alugado">
+                    <img class="alugado__img" src="../assets/codigo_da_vinci.jpg">
+                    <div class="botoes__pequenos">
+                        <button class="botao__pequeno">Devolver</button>
+                        <button class="botao__pequeno">Prorrogar aluguel</button>
+                    </div>
+
+                    <div class="alugado__conteudo">
+                        <h4 class="alugado__titulo">O Código Da Vinci</h4>
+                        <p class="alugado__infos">Alugado em: 02/05/2022<br>Devolução até: 23/08/2023</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Ver ficha completa
+                    </button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">O Hobbit</h5>
+                            </div>
+                            <div class="modal-body">
+                                J.R.R. Tolkien (Autor), Reinaldo José Lopes (Tradutor)<br>
+                                Editora: HarperCollins; 1ª edição (15 julho 2019)<br>
+                                Idioma: Português<br>
+                                Capa dura: 336 páginas<br>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+
+            <div>
+                <button class="botao_prorrogar_todos">Prorrogar todos os aluguéis</button>
+            </div>
+        </section>
+
+        <section id="planos-section" class="planos-container">
+            <h2>Nossos Planos de Assinatura Mensais</h2>
+            <div class="plano__atual">
+                <p>(seu plano atual é o <strong>Machado</strong>)</p>
+            </div>
+            <div class="planos">
+                <div class="plano">
+                    <h4>Plano Amado</h4>
+                    <img class="img_plano" src="../assets/amado.jpg">
+                    <p class="descricao">Nosso plano de entrada, para quem quer entrar de cabeça e manter uma constância no universo da leitura.</p>
+                    <i class="fa-solid fa-book fa-xl" style="color: #ffffff;"></i>
+                    <div class="plano__beneficios">
+                        <ul class="lista__beneficios">
+                            <li class="itens">Receba até um livro por mês;</li>
+                            <li class="itens">Fique com um livro de cada vez;</li>
+                            <li class="itens">Renove o empréstimo indefinidamente, desde que não haja procura pelo livro.</li>
+                        </ul>
+                    </div>
+                    <p class="preco">Mensalidade: R$ 50,00</p>
+                    <button class="botao__assine">Assine</button>
+                </div>
+    
+                <div class="plano">
+                    <h4>Plano Alencar</h4>
+                    <img class="img_plano" src="../assets/alencar.jpg">
+                    <p class="descricao">Ideal também para famílias de leitores que trocam grandes ideis sobre suas leituras atuais.</p>
+                    <i class="fa-solid fa-book fa-xl" style="color: #ffffff;"></i>
+                    <div class="plano__beneficios">
+                        <ul class="lista__beneficios">
+                            <li class="itens">Receba até cinco livros por mês;</li>
+                            <li class="itens">Fique com até cinco livros simultaneamente;</li>
+                            <li class="itens">Renove os empréstimos indefinidamente, desde que não haja procura pelos livros.</li>
+                        </ul>
+                    </div>
+                    <p class="preco">Mensalidade: R$ 100,00</p>
+                    <button class="botao__assine">Assine</button>
+                </div>
+    
+                <div class="plano">
+                    <h4>Plano Machado</h4>
+                    <img class="img_plano" src="../assets/machado.jpg">
+                    <p class="descricao">Pensado para acadêmicos e leitores compulsivos, que só se sentem confortáveis rodeados de livros.</p>
+                    <i class="fa-solid fa-book fa-xl" style="color: #ffffff;"></i>
+                    <div class="plano__beneficios">
+                        <ul class="lista__beneficios">
+                            <li class="itens">Receba até dez livros por mês;</li>
+                            <li class="itens">Fique com até dez livros de cada vez;</li>
+                            <li class="itens">Tenha prioridade sobre os livros que já estão com você, mesmo que haja procura por ele.</li>
+                        </ul>
+                    </div>
+                    <p class="preco">Mensalidade: R$ 200,00</p>
+                    <button class="botao__assine">Assine</button>
+                </div>
+
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <span class="copy">Copyright eLendo 2023</span>
+    </footer>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+</html>
